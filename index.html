@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DelishBite Restaurant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">DelishBite</div>
+    <nav class="nav">
+      <button id="homeBtn" class="nav-btn active">Home</button>
+      <button id="menuBtn" class="nav-btn">Menu</button>
+      <button id="placeOrderBtn" class="nav-btn primary">Place Order</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="homeScreen" class="screen active">
+      <div class="hero">
+        <h1>Welcome to DelishBite</h1>
+        <p>Hand-crafted flavors, served fresh. Browse our menu and place an order!</p>
+        <div class="hero-actions">
+          <button id="viewMenu" class="btn">View Menu</button>
+          <button id="quickOrder" class="btn outline">Quick Order</button>
+        </div>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <h3>Fresh Ingredients</h3>
+          <p>Locally sourced, always fresh.</p>
+        </div>
+        <div class="feature">
+          <h3>Fast Service</h3>
+          <p>We respect your time.</p>
+        </div>
+        <div class="feature">
+          <h3>Cozy Ambience</h3>
+          <p>Eat, relax, enjoy.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="menuScreen" class="screen">
+      <div class="menu-header">
+        <h2>Our Menu</h2>
+        <div class="menu-controls">
+          <input id="searchInput" type="text" placeholder="Search dishes..." />
+          <select id="sortSelect">
+            <option value="default">Sort</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="name-asc">Name A → Z</option>
+          </select>
+        </div>
+      </div>
+      <div id="menuGrid" class="menu-grid"></div>
+      <div id="menuError" class="error hidden"></div>
+    </section>
+
+    <aside id="statusPanel" class="status-panel">
+      <h3>Order Status</h3>
+      <div id="statusLog" class="status-log"></div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> DelishBite • Built with ❤️</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
